@@ -1,4 +1,4 @@
-## Simple Contact App 
+## Simple Tips Calculator 
 
 Design and Implement the Tip Calculator app from Chapter 12, section 12.5.
 
