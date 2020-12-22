@@ -1,14 +1,14 @@
 ## Simple Contact App 
 
-esign and Implement the Tip Calculator app from Chapter 12, section 12.5.
+Design and Implement the Tip Calculator app from Chapter 12, section 12.5.
 
 ### ScreenShots:
-![](img3.png) 
+![](img3.PNG) 
 
 Without giving any value
 
 ---
-![](img4.png) 
+![](img4.PNG) 
 
 When enter value and chage the slider
 
