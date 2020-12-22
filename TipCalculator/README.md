@@ -1,6 +1,6 @@
 ## Simple Contact App 
 
-esign and Implement the Tip Calculator app from Chapter 12, section 12.5.
+Design and Implement the Tip Calculator app from Chapter 12, section 12.5.
 
 ### ScreenShots:
 ![](img1.png) 
