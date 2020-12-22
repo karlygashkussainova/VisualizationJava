@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="painter.PainterController">
+   <left>
+      <VBox maxWidth="-Infinity" spacing="8.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="8.0" />
+         </BorderPane.margin>
+         <children>
+            <TitledPane text="Color">
+               <content>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Red" />
+                        <Slider fx:id="redSlider" max="255.0" />
+                        <TextField fx:id="redTextField" />
+                        <Label text="Blue" />
+                        <Slider fx:id="blueSlider" max="255.0" />
+                        <TextField fx:id="blueTextField" />
+                        <Label text="Green" />
+                        <Slider fx:id="greenSlider" max="255.0" />
+                        <TextField fx:id="greenTextField" />
+                        <Rectangle fx:id="rectangleShape" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="30.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane text="Pen Size">
+               <content>
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" spacing="8.0">
+                     <children>
+                        <RadioButton fx:id="smallRadioButton" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" text="Small">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sizeToggleGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="mediumRadioButton" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" selected="true" text="Medium" toggleGroup="$sizeToggleGroup" />
+                        <RadioButton fx:id="largeRadioButton" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" text="Large" toggleGroup="$sizeToggleGroup" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <Button fx:id="undoButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#undoButtonPressed" text="Undo" />
+            <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtoPressed" text="Clear" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="drawingreaPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onDragDetected="#colorRadioButtonSelected" onMouseDragged="#drawingAreaMouseDragged" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</BorderPane>
