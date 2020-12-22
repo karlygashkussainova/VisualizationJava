@@ -5,17 +5,17 @@ The Tip Calculator app from Section 12.5 does not need a Button to perform its c
 ### ScreenShots:
 ![](img1.PNG) 
 
-With the slider 
+Without giving any value
 
 ---
 ![](img2.PNG) 
 
-With the slider regulations equal to 15%
+With the slider regulations equal to 17%
 
 ---
 ![](img3.PNG) 
 
-With the slider regulations equal to 15%
+With the slider regulations equal to 25%
 
 ---
 
