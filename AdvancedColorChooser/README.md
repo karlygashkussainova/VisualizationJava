@@ -6,6 +6,7 @@
 ![](IMG1.PNG) 
 
 With the slider regulations
+
 ---
 ![](IMG2.PNG) 
 
