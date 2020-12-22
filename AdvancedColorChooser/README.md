@@ -20,3 +20,8 @@ Scene Builder 11.0.0 (https://gluonhq.com/products/scene-builder/)
 IntelliJ IDEA ( https://www.jetbrains.com/idea/)
 
 For VM options :--module-path ${PATH_TO_JAVAFX} --add-modules javafx.controls,javafx.fxml ;${PATH_TO_JAVAFX} - path to JavaFX library 
+
+---
+
+## Author:
+Karlygash Kussainova
