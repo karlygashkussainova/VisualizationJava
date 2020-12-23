@@ -35,14 +35,14 @@ public class ContactAppAdvancedController {
 
     private final ObservableList<Student> students = FXCollections.observableArrayList();
 
-    public void initialize(){
+    public void initialize(){ //initialize and populate the listView with some values
         students.add(new Student("Adelina", "Almazova", "almazova@gmail.com", "06679954","CS", "ContactAppAdvanced/Images/ImagesContacts/Adelina.jpeg"));
         students.add(new Student("Eldiiar", "Dzhunusov", "eliiar@gmail.com", "06665435", "CS","ContactAppAdvanced/Images/ImagesContacts/Eldiiar.jpeg"));
         students.add(new Student("Zarastin", "Kholbash", "kholbash_2021ucentralasia.org", "+99234563356","Coms and Media","ContactAppAdvanced/Images/ImagesContacts/Zarastin.jpeg"));
         students.add(new Student("Iskender", "Berdiev", "berdiev@mail.ru", "+996445335", "CS","ContactAppAdvanced/Images/ImagesContacts/Iskender.jpeg"));
         students.add(new Student("Zere", "Anuarbekova", "zere_98@mail.ru", "+77074457788", "Medicine","ContactAppAdvanced/Images/ImagesContacts/Zere.jpeg"));
         //Collections.sort(students);
-        students.stream().sorted().map((s -> s.getLastName()));
+        //students.stream().sorted().map((s -> s.getLastName()));
 
         studentsListView.setItems(students);
 
