@@ -28,7 +28,7 @@ public class ContactAppController {
 
     private final ObservableList<Students> students = FXCollections.observableArrayList();
 
-    public void initialize(){
+    public void initialize(){ //initialize and populate listView with some vallues
         students.add(new Students("Adelina", "Almazova", "almazova@gmail.com", "06679954","CS"));
         students.add(new Students("Eldiiar", "Dzhunusov", "eliiar@gmail.com", "06665435", "CS"));
         students.add(new Students("Zarastin", "Kholbash", "kholbash_2021ucentralasia.org", "+99234563356","Coms and Media"));
@@ -36,9 +36,9 @@ public class ContactAppController {
         students.add(new Students("Zere", "Anuarbekova", "zere_98@mail.ru", "+77074457788", "Medicine"));
         studentsListView.setItems(students);
 
-        studentsListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Students>() {
+        studentsListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Students>() { //function of the studentView
             @Override
-            public void changed(ObservableValue<? extends Students> observableValue, Students students, Students t1) {
+            public void changed(ObservableValue<? extends Students> observableValue, Students students, Students t1) { 
                 nameTextField.setText(t1.getName());
                 secondNameTextField.setText(t1.getLastName());
                 emailTextFiled.setText(t1.getEmail());
@@ -49,20 +49,20 @@ public class ContactAppController {
 
     }
     @FXML
-    void onUpdatePressed(ActionEvent event) {
+    void onUpdatePressed(ActionEvent event) { //when press on Add button
         students.add(new Students(nameTextField.getText(), secondNameTextField.getText(), emailTextFiled.getText(),phoneTextField.getText(),majorTextField.getText()));
         studentsListView.setItems(students);
     }
 
     @FXML
-    void onDeletePressed(ActionEvent event) {
+    void onDeletePressed(ActionEvent event) { //when press on delete button
         Students student = new Students(nameTextField.getText(), secondNameTextField.getText(), emailTextFiled.getText(),phoneTextField.getText(),majorTextField.getText());
         students.removeIf(i-> i.getName().equals(student.getName()) && i.getLastName().equals(student.getLastName()) && i.getEmail().equals(student.getEmail()) && i.getPhone().equals(student.getPhone()) && i.getMajor().equals(student.getMajor()));
         studentsListView.setItems(students);
 
     }
     @FXML
-    void onCLearPressed(ActionEvent event) {
+    void onCLearPressed(ActionEvent event) { //when press on clear button
         nameTextField.setText("");
         secondNameTextField.setText("");
         emailTextFiled.setText("");
