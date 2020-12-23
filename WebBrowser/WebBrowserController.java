@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class WebBrowserController implements Initializable {
-
+//initial string values 
     String httpsLink = "https://";
     String addressLink;
     WebEngine engine;
@@ -27,7 +27,7 @@ public class WebBrowserController implements Initializable {
     @FXML    private Button searchButton;
     @FXML    private WebView myWebView;
 
-    public void search(){
+    public void search(){ //
         addressLink = addressTextField.getText().trim();
         engine.load(httpsLink+addressLink);
         store.add(addressLink);
@@ -70,7 +70,7 @@ public class WebBrowserController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { //initializing
         engine = myWebView.getEngine();
         engine.load(httpsLink+"www.google.com");
         nButton.setDisable(true);
