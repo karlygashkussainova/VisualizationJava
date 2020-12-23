@@ -22,39 +22,19 @@ public class AdvancedTipCalculatorController {
     private BigDecimal totalAmount = new BigDecimal(0);
 
     // GUI controls defined in FXML and used by the controller's code
-    @FXML
-    private Label amountLabel;
-
-    @FXML
-    private Label tipPercentageLabel;
-
-    @FXML
-    private Label tipLabel;
-
-    @FXML
-    private Label totalLabel;
-
-    @FXML
-    private Slider tipPercentageSlider;
-
-    @FXML
-    private TextField amountTextField;
-
-    @FXML
-    private TextField tipTextField;
-
-    @FXML
-    private TextField totalTextField;
-
-
+    @FXML    private Label amountLabel;
+    @FXML    private Label tipPercentageLabel;
+    @FXML    private Label tipLabel;
+    @FXML    private Label totalLabel;
+    @FXML    private Slider tipPercentageSlider;
+    @FXML    private TextField amountTextField;
+    @FXML    private TextField tipTextField;
+    @FXML    private TextField totalTextField;
 
     public void initialize() {
-        // 0-4 rounds down, 5-9 rounds up
         currency.setRoundingMode(RoundingMode.HALF_UP);
-
-
-
-        // listener for changes to tipPercentageSlider's value
+        
+  // listener for changes to tipPercentageSlider's value
         tipPercentageSlider.valueProperty().addListener(
                 new ChangeListener<Number>() {
                     @Override
