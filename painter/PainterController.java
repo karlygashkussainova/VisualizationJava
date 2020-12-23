@@ -32,12 +32,12 @@ public class PainterController {
     @FXML    private Button clearButton;
     @FXML    private Pane drawingreaPane;
 
-    private enum PenSize{
+    private enum PenSize{  //options fo rthe pen size
         SMALL(2),
         MEDIUM(4),
         LARGE(6);
 
-        private final int radius;
+        private final int radius; //initializing radius of the pen
         PenSize(int radius){
             this.radius = radius;
         }
@@ -47,8 +47,8 @@ public class PainterController {
         }
     };
 
-    private PenSize radius = PenSize.MEDIUM;
-    private Color brushColor = Color.BLACK;
+    private PenSize radius = PenSize.MEDIUM; //initial values
+    private Color brushColor = Color.BLACK;//initial values
     private int red = 0;
     private int green = 0;
     private int blue = 0;
