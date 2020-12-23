@@ -7,29 +7,16 @@ import javafx.scene.control.TextField;
 
 public class BMIController {
 
+    @FXML    private Button metricsButton;
+    @FXML    private Button englishButton;
+    @FXML    private TextField weightMetricsTextField;
+    @FXML    private TextField heightMetricsTextField;
+    @FXML    private TextField weightEnglishTextField;
+    @FXML    private TextField heightEnglishTextField;
+    @FXML    private TextField bmiValueTextField;
+    
     @FXML
-    private Button metricsButton;
-
-    @FXML
-    private Button englishButton;
-
-    @FXML
-    private TextField weightMetricsTextField;
-
-    @FXML
-    private TextField heightMetricsTextField;
-
-    @FXML
-    private TextField weightEnglishTextField;
-
-    @FXML
-    private TextField heightEnglishTextField;
-
-    @FXML
-    private TextField bmiValueTextField;
-
-    @FXML
-    void onEnglishPressed(ActionEvent event) {
+    void onEnglishPressed(ActionEvent event) { //When use Button for english metrics
         try{
             double bmiIndex;
             double weight = Double.parseDouble(weightEnglishTextField.getText());
@@ -63,7 +50,7 @@ public class BMIController {
     }
 
     @FXML
-    void onMetricsPressed(ActionEvent event) {
+    void onMetricsPressed(ActionEvent event) { //When standart metrics are chosen
         try{
             double bmiIndex;
             double weight = Double.parseDouble(weightMetricsTextField.getText());
