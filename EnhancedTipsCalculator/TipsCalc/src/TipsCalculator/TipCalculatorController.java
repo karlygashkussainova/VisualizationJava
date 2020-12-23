@@ -16,49 +16,25 @@ import java.text.Bidi;
 import java.text.NumberFormat;
 
 public class TipCalculatorController {
-    private static final NumberFormat currency = NumberFormat.getCurrencyInstance();
-    private static final NumberFormat percent = NumberFormat.getPercentInstance();
-    private BigDecimal tipPercentage = new BigDecimal(0.15);
+    private static final NumberFormat currency = NumberFormat.getCurrencyInstance(); //set format for currency
+    private static final NumberFormat percent = NumberFormat.getPercentInstance();//set format for percent
+    private BigDecimal tipPercentage = new BigDecimal(0.15);//set format for percentage
+
+    @FXML    private Label amountLabel;
+    @FXML    private Label tipPercentageLabel;
+    @FXML    private Label tipLabel;
+    @FXML    private Label totalLabel;
+    @FXML    private TextField amountTextField;
+    @FXML    private TextField tipTextField;
+    @FXML    private TextField totalTextField;
+    @FXML    private Slider tipPercentageSlider;
+    @FXML    private Button calculateButton;
+    @FXML    private Label partyMembersLabel;
+    @FXML    private TextField partyMembersTextField;
+    @FXML    private TextField paidByEveryoneTextField;
 
     @FXML
-    private Label amountLabel;
-
-    @FXML
-    private Label tipPercentageLabel;
-
-    @FXML
-    private Label tipLabel;
-
-    @FXML
-    private Label totalLabel;
-
-    @FXML
-    private TextField amountTextField;
-
-    @FXML
-    private TextField tipTextField;
-
-    @FXML
-    private TextField totalTextField;
-
-    @FXML
-    private Slider tipPercentageSlider;
-
-    @FXML
-    private Button calculateButton;
-
-    @FXML
-    private Label partyMembersLabel;
-
-    @FXML
-    private TextField partyMembersTextField;
-
-    @FXML
-    private TextField paidByEveryoneTextField;
-
-
-    @FXML
-    void calculateButtonPressed(ActionEvent event) {
+    void calculateButtonPressed(ActionEvent event) { //when calculate button pressed
         try{
             BigDecimal amount = new BigDecimal(amountTextField.getText());
             BigDecimal partyMembers = new BigDecimal(partyMembersTextField.getText());
@@ -80,7 +56,7 @@ public class TipCalculatorController {
 
     }
 
-    public void initialize(){
+    public void initialize(){ //initialize the values
         currency.setRoundingMode(RoundingMode.HALF_UP);
 
         tipPercentageSlider.valueProperty().addListener(
