@@ -25,54 +25,23 @@ public class AdvancedColorChooserController {
     @FXML    private Circle colorCircle;
     @FXML    private Rectangle colorRectangle;
 
+    // Initial values of the sliders
     private int red = 0;
     private int green = 0;
     private int blue = 0 ;
     private double alpha = 1.0;
 
-    public void initialize(){
-        //redTextField.textProperty().bind(redSlider.valueProperty().asString("%.0f"));
-        //greenTextField.textProperty().bind(greenSlider.valueProperty().asString("%.0f"));
-        //blueTextField.textProperty().bind(blueSlider.valueProperty().asString("%.0f"));
+    public void initialize(){ //initializing
+        
         alphaTextField.textProperty().bind(alphaSlider.valueProperty().asString("%.2f"));
         redSlider.setValue(red);
         redTextField.setText(String.valueOf(red));
-        redTextField.textProperty().bindBidirectional(redSlider.valueProperty(), NumberFormat.getNumberInstance());
+        redTextField.textProperty().bindBidirectional(redSlider.valueProperty(), NumberFormat.getNumberInstance()); //binding the sliders and the textfileds bidierctionally 
         blueTextField.textProperty().bindBidirectional(blueSlider.valueProperty(), NumberFormat.getNumberInstance());
         greenTextField.textProperty().bindBidirectional(greenSlider.valueProperty(), NumberFormat.getNumberInstance());
 
 
-
-        /*redTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            int red = (int) redSlider.getValue();
-            if (red >= 0 || red <= 255)
-            {red = 0;}
-            red = Integer.parseInt(newValue.trim());
-            redSlider.setValue(red);
-
-        });
-
-        blueTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            int red = (int) blueSlider.getValue();
-            if (red >= 0 || red <= 255)
-            {red = 0;}
-            red = Integer.parseInt(newValue.trim());
-            blueSlider.setValue(red);
-
-        });
-
-        greenTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-            int red = (int) greenSlider.getValue();
-            if (red >= 0 || red <= 255)
-            {red = 0;}
-            red = Integer.parseInt(newValue.trim());
-            greenSlider.setValue(red);
-            //greenSlider.valueProperty().bindBidirectional(blueTextField.property);
-
-        });*/
-
-
-        blueSlider.valueProperty().addListener(
+        blueSlider.valueProperty().addListener(   
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> ov, Number oldValue, Number newValue) {
@@ -115,14 +84,5 @@ public class AdvancedColorChooserController {
                     }
                 }
         );
-
-
-
-
-
-
-
-
     }
-
 }
