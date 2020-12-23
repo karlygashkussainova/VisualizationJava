@@ -8,20 +8,12 @@ import java.awt.event.ActionEvent;
 
 public class HeartRateDriver {
 
+    @FXML    private TextField ageTextField;
+    @FXML    private TextField maxRateTextField;
+    @FXML    private TextField targetRateTextField;
+    @FXML    private Button okButton;
     @FXML
-    private TextField ageTextField;
-
-    @FXML
-    private TextField maxRateTextField;
-
-    @FXML
-    private TextField targetRateTextField;
-
-    @FXML
-    private Button okButton;
-
-    @FXML
-    void onButtonPressed(ActionEvent event) {
+    void onButtonPressed(ActionEvent event) { //when button pressed
         try{
             int age = Integer.parseInt(ageTextField.getText());
             int maxRate = 220 - age;
