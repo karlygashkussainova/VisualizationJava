@@ -215,11 +215,7 @@ public class ControllerPlayers implements Initializable {
         else if(this.filledSquaresCounter == 9) {
             this.tie = true;
             this.endGame();}}
-
-
-
-
-
+            
     public boolean isOccupiedByCircle(int circlePosition) {//check if the square is occupied by circle
         boolean found = false;
         for(int filledCircle : this.filledCircles) {
@@ -281,18 +277,14 @@ public class ControllerPlayers implements Initializable {
         this.filledSquaresCounter = 0;
         this.filledCirclesCounter = 0;
         this.filledXCounter = 0;
-        this.currentPlayer = "O";
-    }
-
+        this.currentPlayer = "O";}
+        
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
-
-
-
-    public boolean checkVictory() {
+    
+    public boolean checkVictory() { //check all of the winning position
         boolean flag = false;
         if((isOccupiedByCircle(1) && isOccupiedByCircle(2) && isOccupiedByCircle(3)) ||
                 (isOccupiedByCircle(4) && isOccupiedByCircle(5) && isOccupiedByCircle(6)) ||
@@ -302,9 +294,9 @@ public class ControllerPlayers implements Initializable {
                 (isOccupiedByCircle(3) && isOccupiedByCircle(6) && isOccupiedByCircle(9)) ||
                 (isOccupiedByCircle(1) && isOccupiedByCircle(5) && isOccupiedByCircle(9)) ||
                 (isOccupiedByCircle(3) && isOccupiedByCircle(5) && isOccupiedByCircle(7)) ){
-            this.winningTeam = 'O';
+            this.winningTeam = 'O';// announce O as a winner
             flag = true;
-            this.allowMoves = false;
+            this.allowMoves = false; // do not allow anymore moves
         }
 
         if((isOccupiedByX(1) && isOccupiedByX(2) && isOccupiedByX(3)) ||
@@ -315,15 +307,11 @@ public class ControllerPlayers implements Initializable {
                 (isOccupiedByX(3) && isOccupiedByX(6) && isOccupiedByX(9)) ||
                 (isOccupiedByX(1) && isOccupiedByX(5) && isOccupiedByX(9)) ||
                 (isOccupiedByX(3) && isOccupiedByX(5) && isOccupiedByX(7)) ){
-            this.winningTeam = 'X';
+            this.winningTeam = 'X'; //announce X as a winner
             flag = true;
-            this.allowMoves = false;
+            this.allowMoves = false;// do not allow anymore moves
         }
-
-
-
         return flag;
     }
-
 
 }
