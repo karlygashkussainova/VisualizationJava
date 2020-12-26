@@ -6,8 +6,8 @@ Players can occupy the squares with X-s or O-s. In case, any of the players plac
 
 |   |  |  |  |
 | -------------     | -------------  |------------- |-------------  |
-|  ![](Images/win1.png)       | ![](Images/win6.png) |![](Images/win7.png) |![](Images/win2.png) |
-|  ![](Images/win3.png)       | ![](Images/win4.png) |![](Images/win5.png) |![](Images/win8.png) |
+|  ![](Images/win1.png)       | ![](Images/win6.png) |![](Images/win7.png) |![](Images/win8.png) |
+|  ![](Images/win3.png)       | ![](Images/win4.png) |![](Images/win5.png) |![](Images/win2.png) |
 |   |  |  |  |
 
 ---
