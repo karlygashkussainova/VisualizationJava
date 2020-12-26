@@ -115,10 +115,10 @@ public class TicTacToeController implements Initializable {
                 default:
                     System.out.println("Impossible choice");
                     break;}
-            this.filledSquares[this.filledSquaresCounter] = squarePosition;
-            this.filledCircles[this.filledCirclesCounter] = squarePosition;
-            this.filledSquaresCounter++;
-            this.filledCirclesCounter++;
+            this.filledSquares[this.filledSquaresCounter] = squarePosition; //fill filled squares array with this position
+            this.filledCircles[this.filledCirclesCounter] = squarePosition;// fill filled circles array with this position
+            this.filledSquaresCounter++; //increase the counter of the squares
+            this.filledCirclesCounter++;//increase the counter of the circles
             if(this.checkVictory()) { //check if anyone has won
                 this.endGame();}
             else {
@@ -129,7 +129,7 @@ public class TicTacToeController implements Initializable {
             this.tie = true; //activate tie
             this.endGame();}}
 
-    public boolean isSelectedSquare(int squarePosition) { //check if the square is lready selected
+    public boolean isSelectedSquare(int squarePosition) { //check if the square is already selected
         boolean found = false;
         for(int filledSquare : this.filledSquares) {
             if(squarePosition == filledSquare) {
