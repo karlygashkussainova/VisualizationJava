@@ -9,21 +9,21 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.Controller">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.TicTacToeController">
     <children>
         <Line endX="150.0" layoutX="300.0" layoutY="150.0" startX="-150.0" />
         <Line endY="150.0" layoutX="250.0" layoutY="200.0" startY="-150.0" />
         <Line endY="150.0" layoutX="350.0" layoutY="200.0" startY="-150.0" />
         <Line endX="150.0" layoutX="300.0" layoutY="250.0" startX="-150.0" />
-        <Rectangle fx:id="SquareOne" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="151.0" layoutY="51.0" onMouseClicked="#handleSquareOneClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareTwo" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="50.0" onMouseClicked="#handleSquareTwoClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareThree" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="51.0" onMouseClicked="#handleSquareThreeClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareFour" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="150.0" layoutY="151.0" onMouseClicked="#handleSquareFourClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareFive" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="151.0" onMouseClicked="#handleSquareFiveClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareSix" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="151.0" onMouseClicked="#handleSquareSixClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareSeven" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="151.0" layoutY="251.0" onMouseClicked="#handleSquareSevenClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareEight" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="251.0" onMouseClicked="#handleSquareEightClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
-        <Rectangle fx:id="SquareNine" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="251.0" onMouseClicked="#handleSquareNineClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareOne" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="151.0" layoutY="51.0" onMouseClicked="#onSquareOneClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareTwo" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="50.0" onMouseClicked="#onSquareTwoClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareThree" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="51.0" onMouseClicked="#onSquareThreeClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareFour" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="150.0" layoutY="151.0" onMouseClicked="#onSquareFourClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareFive" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="151.0" onMouseClicked="#onSquareFiveClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareSix" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="151.0" onMouseClicked="#onSquareSixClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareSeven" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="151.0" layoutY="251.0" onMouseClicked="#onSquareSevenClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareEight" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="251.0" layoutY="251.0" onMouseClicked="#onSquareEightClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
+        <Rectangle fx:id="SquareNine" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="351.0" layoutY="251.0" onMouseClicked="#onSquareNineClick" stroke="WHITE" strokeType="INSIDE" width="98.0" />
         <Circle fx:id="CircleOne" fill="WHITE" layoutX="200.0" layoutY="99.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" visible="false" />
         <Circle fx:id="CircleTwo" fill="WHITE" layoutX="300.0" layoutY="99.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" visible="false" />
         <Circle fx:id="CircleThree" fill="WHITE" layoutX="400.0" layoutY="100.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" visible="false" />
@@ -78,11 +78,11 @@
                 <Font size="88.0" />
             </font>
         </Label>
-        <Label fx:id="lblMessages" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="366.0" prefHeight="20.0" prefWidth="300.0">
+        <Label fx:id="resultTextLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" layoutY="366.0" prefHeight="20.0" prefWidth="300.0">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
-        <Button fx:id="btnReset" layoutX="274.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleResetButton" text="Reset" />
+        <Button fx:id="btnReset" layoutX="274.0" layoutY="398.0" mnemonicParsing="false" onAction="#onResetPressedButton" text="Reset" />
     </children>
-    </AnchorPane>
+</AnchorPane>
