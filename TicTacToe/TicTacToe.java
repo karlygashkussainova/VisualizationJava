@@ -13,7 +13,7 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("TicTacToe.fxml"));
         primaryStage.setTitle("Tic Tac Toe");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 600));
         primaryStage.show();
     }
 
