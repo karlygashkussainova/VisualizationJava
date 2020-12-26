@@ -24,7 +24,6 @@ If you want to play against computer, choose TicTacToeController.java, and if yo
 
 
 ## Screen shots and the feature list
-
 ### Feature list: 
 |  Planned features |  Implemented features|  Yet to implement features |
 | -------------     | -------------  |-------------  |
