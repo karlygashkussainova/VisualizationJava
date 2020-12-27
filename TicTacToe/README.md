@@ -46,7 +46,8 @@ If you want to play against computer, choose TicTacToeController.java, and if yo
 
 ---
 
-
+## Author:
+Karlygash Kussainova
 
 
 
